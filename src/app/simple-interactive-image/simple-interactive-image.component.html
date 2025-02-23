@@ -1,0 +1,67 @@
+<div class="general-container">
+  <div
+    class="image-container"
+    (mouseenter)="imageContainerMouseEnter()"
+    (mousedown)="imageContainerMouseDown($event)"
+    (mousemove)="imageContainerMouseMove($event)"
+    (mouseup)="imageContainerMouseUp()"
+    (mouseleave)="imageContainerMouseLeave()"
+  >
+    <img
+      #imageElement
+      (load)="onImageLoad()"
+      [src]="imageSrc"
+      [style.transform]="
+        'scale(' +
+        zoomFactor +
+        ') translate(' +
+        imageElementOffsetX +
+        'px, ' +
+        imageElementOffsetY +
+        'px) rotate(' +
+        imageElementRotationAngle +
+        'deg)'
+      "
+    />
+    <div
+      class="control-button-container"
+      [style.visibility]="controlButtonsVisible ? 'visible' : 'hidden'"
+    >
+      <button
+        class="control-button zoom-button"
+        (mousedown)="controlButtonMouseDown($event)"
+        (click)="zoomIn()"
+      >
+        +
+      </button>
+      <button
+        class="control-button zoom-button"
+        (mousedown)="controlButtonMouseDown($event)"
+        (click)="zoomOut()"
+      >
+        -
+      </button>
+      <button
+        class="control-button rotate-button"
+        (mousedown)="controlButtonMouseDown($event)"
+        (click)="rotateClockwise()"
+      >
+        &#x27F3;
+      </button>
+      <button
+        class="control-button rotate-button"
+        (mousedown)="controlButtonMouseDown($event)"
+        (click)="rotateCounterclockwise()"
+      >
+        &#x27F2;
+      </button>
+      <button
+        class="control-button reset-button"
+        (mousedown)="controlButtonMouseDown($event)"
+        (click)="reset()"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+</div>

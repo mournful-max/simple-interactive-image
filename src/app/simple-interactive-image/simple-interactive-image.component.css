@@ -1,0 +1,71 @@
+:host {
+  display: inline-block;
+  overflow: hidden;
+  user-select: none;
+
+  width: fit-content;
+  height: fit-content;
+}
+.general-container {
+  display: block;
+  user-select: none;
+
+  width: 100%;
+  height: 100%;
+}
+.image-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+
+  width: 100%;
+  height: 100%;
+}
+img {
+  display: block;
+  transform-origin: center;
+  pointer-events: none;
+  user-select: none;
+
+  width: 100%;
+  height: 100%;
+}
+.control-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  gap: 8px;
+}
+.control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.control-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.zoom-button,
+.rotate-button {
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+}
+.reset-button {
+  border-radius: 45%;
+  font-size: 14px;
+  width: 60px;
+  height: 40px;
+}

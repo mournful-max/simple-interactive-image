@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 80vh;
+  padding: 10vh;
+}
+simple-interactive-image {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 1vh;
+  outline: 0.5vh solid beige;
+}
+.image-status {
+  user-select: none;
+  font-size: 1.5em;
+  padding: 1vh;
+}
